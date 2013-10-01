@@ -1,0 +1,83 @@
+{
+	"language" : "Español",
+	"password" : "Contraseña",
+	"email" : "Email",
+	"username" : "Usuario",
+	"confirm" : "Confirmar",
+	"print" : "Imprimir",
+	"treehistory" : "Histórico",
+	"update" : "Actualización",		
+	"userprofile" : "Perfil de usuario",		
+	"subscribe" : "Suscríbase a cambios",		
+	"save" : "Guardar",		
+	"cancel" : "Cancelar",		
+	"preview" : "Previsualizar",		
+	"comment" : "Comentario",		
+	"return" : "Volver",		
+	"images" : "Imágenes",		
+	"insertimage" : "Insertar imagen",		
+	"reference" : "Referencia",		
+	"pagelocked" : "Página bloqueada",		
+	"sourceview" : "Visra de código",		
+	"choosefile" : "Selecionar archivo",		
+	"upload" : "Subir",	
+    
+    "scroll" : "Scroll", 
+           	
+	"history" : {
+		"display" : "Enseñar",		
+		"revert" : "Deshacer",		
+		"revision" : "Revisión",		
+		"old" : "Anterior",		
+		"new" : "Nuevo",		
+		"lines" : "líneas",		
+		"current" : "Actual", 
+             
+        "diff" : "Diff",
+        "action" : "Acción",
+        "goback" : "Volver"
+	},		
+	"menu" : {
+		"login" : "Entrar",
+		"logout" : "Salir",
+		"register" : "Registrarse",
+		"edit" : "Editar",
+		"tags" : "Tags",
+		"profile" : "Perfil",
+		"history" : "Historia",
+        
+        "edittags" : "Editar tags",
+        "view" : "Vista",
+        "admin" : "Admin"       		
+	},
+	"tabs" : {
+		"contents" : "Contenido",
+		"index" : "Índice",
+		"search" : "Búsqueda",
+		"type" : "Teclee para encontrar",
+		"list" : "Listar temas"
+	},
+	"node" : {
+		"title" : "Título",
+		"newpage" : "Nuevo nombre",
+		"add" : "Añadir",
+		"action" : "Acción",
+		"remove" : "Eliminar",
+		"cut" : "Cortar",
+		"paste" : "Pegar",
+		"rename" : "Renombrar",
+		"addpaste" : "Añadir / Pegar",
+		"before" : "Antes",
+		"after" : "Después",
+		"in" : "En",
+		"comment" : "Comentario de revisión"
+	},
+    "message" : {
+        "unlocked" : "La página debe estar desbloqueada",
+        "loggedin" : "Debe estar identificado y la págian debe estar desbloqueada.",
+        "unauthorized" : "No está autorizados para modificar esta estructura!"
+        
+    }
+
+
+}

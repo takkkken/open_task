@@ -1,0 +1,1 @@
+<?php die;?>a:2:{s:2:"GV";i:7;s:6:"TABLES";a:2:{i:0;s:10:"GLADIUS_TT";i:1;s:9:"PHONEBOOK";}}

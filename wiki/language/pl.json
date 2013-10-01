@@ -1,0 +1,81 @@
+{
+    "language" : "Polski",
+    "password" : "Hasło",
+    "email" : "email",
+    "username" : "Nazwa użytkownika",
+    "confirm" : "Potwierdź",
+    "print" : "Wydrukuj",
+    "treehistory" : "Eksplorator",
+    "update" : "zaktualizuj",        
+    "userprofile" : "Profil użytkownika",     
+    "subscribe" : "Subskrybuj by śledzić zmiany",       
+    "save" : "Zapisz",        
+    "cancel" : "Anuluj",        
+    "preview" : "Podgląd",      
+    "comment" : "Komentarz",      
+    "return" : "Powrót",        
+    "images" : "Obrazy",        
+    "insertimage" : "Wstaw obraz",     
+    "reference" : "Odnośnik",      
+    "pagelocked" : "Strona zablokowana",       
+    "sourceview" : "Pokaż źródło",       
+    "choosefile" : "Wybierz plik",       
+    "upload" : "upload",
+    
+    "scroll" : "przewiń", 
+           
+    "history" : {
+        "display" : "wyświetl",      
+        "revert" : "powrót",        
+        "revision" : "korekta",        
+        "old" : "stary",      
+        "new" : "nowy",      
+        "lines" : "wiersze",      
+        "current" : "Aktualny", 
+             
+        "diff" : "Diff",
+        "action" : "Wykonaj",
+        "goback" : "Cofnij"
+      },      
+    "menu" : {
+        "login" : "Login",
+        "logout" : "Wyloguj",
+        "register" : "Zarejestruj się",
+        "edit" : "Edytuj",
+        "tags" : "Tagi",
+        "profile" : "Profil",
+        "history" : "Historia",
+        "edittags" : "Edytuj Tagi",
+        "view" : "Widok",
+        "admin" : "Admin"       
+    },
+    "tabs" : {
+        "contents" : "Treść",
+        "index" : "Index",
+        "search" : "Szukaj",
+        "type" : "Wpisz słowo kluczowe aby znaleźć ",
+        "list" : "Lista tematów"
+    },
+    "node" : {
+        "title" : "Opcje segmentu",
+        "newpage" : "Nazwa nowej strony",
+        "add" : "Dodaj",
+        "action" : "Akcja",
+        "remove" : "Usuń",
+        "cut" : "Wytnij",
+        "paste" : "Wklej",
+        "rename" : "Zmień nazwę",
+        "addpaste" : "Dodaj lub Wklej",
+        "before" : "Przed",
+        "after" : "Po",
+        "in" : "w",
+        "comment" : "Komentarz"
+    },
+    "message" : {
+        "unlocked" : "Strona musi być odblokowana.",
+        "loggedin" : "Musisz być zalogowany i strona musi być odblokowana.",
+  "unauthorized" : "Nie masz uprawnień do zarządzania strukturą witryny!"
+        
+        
+    }
+}

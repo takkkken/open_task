@@ -1,0 +1,1 @@
+ALTER TABLE `revision` MODIFY `type` enum('page','tag') COLLATE utf8_unicode_ci NOT NULL;

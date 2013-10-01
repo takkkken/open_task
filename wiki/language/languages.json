@@ -1,0 +1,20 @@
+{
+	"languages" : [
+    {"symbol" : "ja", "text" : "日本語"},
+    {"symbol" : "en", "text" : "English"},
+    {"symbol" : "bg", "text" : "Български"},
+    {"symbol" : "cz", "text" : "Čeština"},
+    {"symbol" : "zh", "text" : "中文"},
+    {"symbol" : "de", "text" : "Deutsch"},
+    {"symbol" : "es", "text" : "español"},
+    {"symbol" : "fr", "text" : "Français"},
+    {"symbol" : "it", "text" : "Italiano"},
+    {"symbol" : "nl", "text" : "Nederlands"},
+    {"symbol" : "pl", "text" : "Polski"},    
+    {"symbol" : "pt", "text" : "Portugu&#234;s"},
+    {"symbol" : "ro", "text" : "Română"},
+    {"symbol" : "se", "text" : "Svenska"},
+    {"symbol" : "tr", "text" : "Türkçe"},
+    {"symbol" : "ru", "text" : "Русский"}
+	]
+}

@@ -1,0 +1,33 @@
+table.sf-tracker-table {
+	background:#ffd;
+	border:1px solid;
+	width:auto;
+    border-collapse:collapse;
+}
+
+th.sf-tracker-th{
+	text-align:left;
+}
+
+tr.sf-tracker-tr{
+	border-bottom: 1px solid black;
+    max-width: 1200px;
+
+}
+
+td.sf-tracker-td{
+	vertical-align: text-top;
+    padding: 8px 3px;
+    max-width: 800px;
+    overflow: hidden;
+}
+
+td.sf-tracker-td-open{
+	color:#800;
+	font-weight:bold;
+}
+
+td.sf-tracker-td-closed{
+	color:#080;
+	font-weight:bold;
+}

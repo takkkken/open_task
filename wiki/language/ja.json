@@ -1,0 +1,81 @@
+{
+    "language" : "日本語",
+    "password" : "パスワード",
+    "email" : "メール",
+    "username" : "ユーザ名",
+    "confirm" : "確認",
+    "print" : "印刷",
+    "treehistory" : "ツリー履歴",
+    "update" : "更新",        
+    "userprofile" : "ユーザプロフィール",     
+    "subscribe" : "変更を許可する",       
+    "save" : "保存",        
+    "cancel" : "キャンセル",        
+    "preview" : "プレビュー",      
+    "comment" : "コメント",      
+    "return" : "戻る",        
+    "images" : "画像",        
+    "insertimage" : "画像挿入",     
+    "reference" : "参照",      
+    "pagelocked" : "ページロック",       
+    "sourceview" : "ソースビュー",       
+    "choosefile" : "ファイル選択",       
+    "upload" : "アップロード",
+    
+    "scroll" : "スクロール", 
+           
+    "history" : {
+        "display" : "表示",      
+        "revert" : "戻す",        
+        "revision" : "リビジョン",        
+        "old" : "旧",      
+        "new" : "新",      
+        "lines" : "行",      
+        "current" : "カレント", 
+             
+        "diff" : "差分",
+        "action" : "アクション",
+        "goback" : "戻る"
+    },      
+    "menu" : {
+        "login" : "ログイン",
+        "logout" : "ログアウト",
+        "register" : "登録",
+        "edit" : "修正",
+        "tags" : "タグ",
+        "profile" : "プロフィール",
+        "history" : "履歴",
+        
+        "edittags" : "タグを編集",
+        "view" : "表示",
+        "admin" : "管理者"       
+    },
+    "tabs" : {
+        "contents" : "コンテンツ",
+        "index" : "索引",
+        "search" : "検索",
+        "type" : "キーワードを入力",
+        "list" : "一覧トピック"
+    },
+    "node" : {
+        "title" : "ページの操作",
+        "newpage" : "新規ページ名",
+        "add" : "追加",
+        "action" : "アクション",
+        "remove" : "削除",
+        "cut" : "切り取り",
+        "paste" : "貼付け",
+        "rename" : "名前変更",
+        "addpaste" : "作成場所",
+        "before" : "上",
+        "after" : "下",
+        "in" : "内部",
+        "comment" : "リビジョンコメント"
+    },
+    "message" : {
+        "unlocked" : "ページをアンロックして下さい",
+        "loggedin" : "ログインし、ページをアンロックして下さい",
+        "unauthorized" : "あなたはサイトを管理する権限がありません！"
+        
+    }
+}
