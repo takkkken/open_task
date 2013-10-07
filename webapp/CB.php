@@ -8,11 +8,32 @@
 
 require_once 'CB_conf.php';
 require_once 'CB_mime_type.php';
-require_once  WEBAPP_DIR   . '/conf/'.DB_NAME.'.php';
 require_once  LIB_DIR   . '/gladius/gladius.php';
 require_once  LIB_DIR   . '/adodb_lite/adodb.inc.php';
 require_once  CLASS_DIR . '/CB_Functions.php';
 require_once  CLASS_DIR . '/CB_DB.php';
+
+require_once  WEBAPP_DIR   . '/conf/'.DB_NAME.'.php';
+
+$db = new CB_DB;
+
+
+//echo "<!--";
+//print_r( $db->getAll("SELECT * FROM user") );
+//echo "-->";
+//	2013/10/03　ログイン情報をconfファイルからuserテーブルより取得に変更。
+foreach($db->getAll("SELECT * FROM user") as $userDbAuth){
+	
+	if($userDbAuth['level']=='admin'){
+		$adminFlg= 1;
+	}else{
+		$adminFlg= 0;
+	}
+	$GLOBALS['auth_user'][$userDbAuth['user_name']] = array($userDbAuth['user_disp_name'],$userDbAuth['email'],$userDbAuth['password'],$adminFlg,$userDbAuth['level'],$userDbAuth['subscribe'],$userDbAuth['user_id']);
+}
+
+
+
 
 if(file_exists(WEBAPP_DIR . '/../../global_conf.php')){
 	require_once WEBAPP_DIR . '/../../global_conf.php';
@@ -37,12 +58,11 @@ if(is_null($GLOBALS['user'])){
 
 	header("WWW-Authenticate: Basic realm=\"CBTS\"");
 	header("HTTP/1.0 401 Unauthorized");
-	//���O�C�����
+	//ログイン画面
 	require 'login.php';
 	exit();
 }
 
-$db = new CB_DB;
 
 //$GLOBALS['topic_to_user'] = $db->getAll("SELECT * FROM modified_user_count WHERE user_name NOT LIKE '{$GLOBALS['user']['user_name']}' ORDER BY modified_count DESC");
 $GLOBALS['topic_to_user'] = $db->getAll("SELECT * FROM modified_user_count ORDER BY modified_count DESC");

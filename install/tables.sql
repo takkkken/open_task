@@ -280,8 +280,11 @@ CREATE TABLE IF NOT EXISTS `user` (
   `email` varchar(128) COLLATE utf8_unicode_ci NOT NULL,
   `level` enum('admin','user','blocked') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'user',
   `subscribe` tinyint(1) NOT NULL,
+  `user_disp_name` varchar(32) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`user_id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+
+-- ALTER TABLE user ADD `user_disp_name` varchar(32) AFTER subscribe;
 
 --
 -- Dumping data for table `user`

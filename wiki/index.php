@@ -1,3 +1,36 @@
+<?
+
+//open task の基本認証ログインを使用
+require_once '../webapp/CB.php';
+
+//wiki のセッションログイン(API経由)をシミュレート
+//print_r($GLOBALS['auth_user'][$_SERVER['PHP_AUTH_USER']]);
+require_once("./config.php");
+include("./handlers/editcheck.php");
+
+session_start();
+
+$dispUserName 	= $GLOBALS['auth_user'][$_SERVER['PHP_AUTH_USER']][0];
+//$userMail		= $GLOBALS['auth_user'][$_SERVER['PHP_AUTH_USER']][1];
+//$md5Passwd 		= $GLOBALS['auth_user'][$_SERVER['PHP_AUTH_USER']][2];
+$level 			= $GLOBALS['auth_user'][$_SERVER['PHP_AUTH_USER']][4];
+//$subscribe 		= $GLOBALS['auth_user'][$_SERVER['PHP_AUTH_USER']][5];
+$uid 			= $GLOBALS['auth_user'][$_SERVER['PHP_AUTH_USER']][6];
+$user 			= $_SERVER['PHP_AUTH_USER'];
+$ip 			= $_SERVER['REMOTE_ADDR'];
+
+$_SESSION['uid'] = $uid;
+$_SESSION['level'] = $level;
+//$json = "{'response':'ok','level':'$level','user':'$user','ip':'$ip', 'uid':'$uid'}";
+//echo $json;
+if ($level == 'admin')
+    $_SESSION['admin'] = true;
+
+
+//ここまででログインが完了
+
+?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
@@ -19,9 +52,9 @@
     <body onload="loading();">
 		<div id="header">
 			<span style="display: inline-block;width: 400px;">
-			<a id="siteTitle" href="JavaScript:;" onclick="onClickLogo()">開発チーム２ / タスク管理</a>
+			<a id="siteTitle" href="JavaScript:;" onclick="onClickLogo()">開発チーム２ / wiki</a>
 			</span>
-			<span class="siteMenu" id="siteSubtitle" style="background-color: dimgray;">タスク管理</span>
+			<span class="siteMenu" id="siteSubtitle" style="background-color: dimgray;">wiki pages</span>
 			<span class="siteMenu"><a href="/opentask/"			>task lists</a></span>
 			<span class="siteMenu"><a href="/opentask/websvn/"	>repo viewer</a></span>
             <a id='LocationAnchor' style="position:absolute;top:0;"></a>
@@ -36,7 +69,8 @@
             </div>
             <div style="margin-right:22px;">
                 <div id="logoutmenu" class="menu" style="display:none;">
-                    <a id="logouta" href="javascript:logout()">Logout</a>
+<!--                     <a id="logouta" href="javascript:logout()">Logout</a>-->
+						<?=$dispUserName?>　<a id="logouta" onclick="alert('次のダイアログで、キャンセルをクリックして下さい。\nログアウトします。');" href="../?logout">ログアウト</a>
                 </div>
                 <div id="profilemenu" class="menu" style="display:none;">
                     <div style="position:relative;">
@@ -165,13 +199,11 @@
             <div style="clear:both;">
             </div>
         </div>
-        <div id="footer">
-            <span>Powered by WikiWebHelp developed by <a href="http://richardbondi.net" target="_blank">Richard Bondi</a></span>
-            <span style="margin-left:12px;">Credits:<a href="http://goessner.net/articles/wiky/" target="_blank">Wiky</a>,&nbsp;<a href="http://blogs.kd2.org/bohwaz/?2009/09/17/294-simplediff-a-lightweight-and-independent-diff-library-for-php" target="_blank">simpleDiff</a></span>
+        <div id="footer" style='position:relative;'>
             <div id='status'>
-                anonymous
             </div>
         </div>
+
         <div id="highlight">
         </div>
         <input type='hidden' id='previewtext' value='' />
