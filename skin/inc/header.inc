@@ -26,9 +26,9 @@
 		<span style="display: inline-block;width: 400px;">
 		<a id="siteTitle" href="./"><?=SITE_NAME?> / <?=PJ_NAME?></a>
 		</span>
-		<span class="siteMenu"><a href="/opentask/wiki/">wiki pages</a></span>
+		<span class="siteMenu"><a href="./wiki/">wiki pages</a></span>
 		<span class="siteMenu" style="background-color: dimgray;">task lists</span>
-		<span class="siteMenu"><a href="/opentask/websvn/">repo viewer</a></span>
+		<span class="siteMenu"><a href="./websvn/">repo viewer</a></span>
 <p class="fright">
 <?php if(isset($GLOBALS['user'])){ ?>
 		<?=$GLOBALS['user']['user_name']?>　<a onclick="alert('次のダイアログで、キャンセルをクリックして下さい。\nログアウトします。');" href=./?logout>ログアウト</a></p>

@@ -55,8 +55,8 @@ if ($level == 'admin')
 			<a id="siteTitle" href="JavaScript:;" onclick="onClickLogo()">開発チーム２ / wiki</a>
 			</span>
 			<span class="siteMenu" id="siteSubtitle" style="background-color: dimgray;">wiki pages</span>
-			<span class="siteMenu"><a href="/opentask/"			>task lists</a></span>
-			<span class="siteMenu"><a href="/opentask/websvn/"	>repo viewer</a></span>
+			<span class="siteMenu"><a href="../"			>task lists</a></span>
+			<span class="siteMenu"><a href="../websvn/"	>repo viewer</a></span>
             <a id='LocationAnchor' style="position:absolute;top:0;"></a>
 <!--            <a href="javascript:tree.click(tree.home)">
                 <div id="logo">

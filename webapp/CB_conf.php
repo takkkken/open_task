@@ -15,7 +15,7 @@
 //バグ:Windows環境ではディレクトリが異常になる
 //define('ROOT_DIR'  , preg_replace("/\/webapp$/is","",dirname(__FILE__)));
 //TODO:環境依存
-define('ROOT_DIR', '/home/samba/app/open_task');
+define('ROOT_DIR', '/var/www/html/open_task');
 define('WEBAPP_DIR', ROOT_DIR . '/webapp');
 define('CLASS_DIR' , ROOT_DIR . '/webapp/class');
 define('LIB_DIR'   , ROOT_DIR . '/webapp/lib');
@@ -35,7 +35,7 @@ define('DB_NAME'   , 'default');
 define('DB_TYPE'   , 'mysql');
 define('DB_HOST'   , 'localhost');
 define('DB_USER'   , 'root');
-define('DB_PASS'   , 'pwtech456');
+define('DB_PASS'   , 'ikh1120');
 define('DB_NAME'   , 'opentask');
 
 

@@ -3,7 +3,7 @@ $_CONFIG = true;
 
 # obvious db stuff
 $CFG_USER = 'root';
-$CFG_PASSWORD = 'pwtech456';
+$CFG_PASSWORD = 'ikh1120';
 $CFG_SERVER = 'localhost';
 $CFG_DATABASE = 'opentask';
 
