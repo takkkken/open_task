@@ -67,7 +67,7 @@ if ($level == 'admin')
             <div class='nav'>
                 <input type="button" value=" &lt; " onclick="back();"/><input type="button" value=" &gt; " onclick="forward();"/>
             </div>
-            <div style="margin-right:22px;">
+            <span style="margin-right:22px;">
                 <div id="logoutmenu" class="menu" style="display:none;">
 <!--                     <a id="logouta" href="javascript:logout()">Logout</a>-->
 						<?=$dispUserName?>　<a id="logouta" onclick="alert('次のダイアログで、キャンセルをクリックして下さい。\nログアウトします。');" href="../?logout">ログアウト</a>
@@ -97,14 +97,15 @@ if ($level == 'admin')
                 <div class="menu">
                     <a id="historyna" href="javascript:getnodehistory()">Tree History</a>
                 </div>
+<!--
                 <div class="menu">
                     <div id="lang">
                         <select id="langsel" onchange="changelanguage();">
                             <option value=''>&nbsp;</option>
                         </select>
                     </div>
-                </div>
-            </div>
+                </div>-->
+            </span>
         </div>
         <div style="clear:both;">
         </div>
@@ -211,6 +212,13 @@ if ($level == 'admin')
             <?php $configpath = ".";
             include ('pages/links.php'); ?>
         </div>
+
+
+<div id="lang">
+    <select id="langsel" onchange="changelanguage();">
+        <option value=''>&nbsp;</option>
+    </select>
+</div>
 
     </body>
 </html>

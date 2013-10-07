@@ -1091,8 +1091,8 @@ function validateFolder(){
 	  return false;		
 	}
 	
-	if(r.checked && comment.value.length < 10){
-	  alert('Please enter reason for deletion (min 10 characters)');
+	if(r.checked && comment.value.length < 1){
+	  alert('Please enter reason for deletion');
 	  comment.focus()
 	  comment.select();
 	  return false;		

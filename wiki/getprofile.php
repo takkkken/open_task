@@ -18,7 +18,7 @@ $subscribe = mysql_result($result,0,'subscribe');
 $subcheck = $subscribe == 1 ? ' checked' : '';
 
 ?>
-
+<div style='color: black;'>
       <div class="header"><?php  echo $language->userprofile; ?></div>
 	  
       <div class="label"><?php  echo $language->username; ?>:</div>
@@ -47,3 +47,4 @@ $subcheck = $subscribe == 1 ? ' checked' : '';
 	   <input type="hidden" id="subscribe" name="subscribe" value="<?php echo $id; ?>" />
        <input type="submit" value="<?php  echo $language->update; ?>"/>
       </div>
+  </div>
