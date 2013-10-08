@@ -1,0 +1,10 @@
+USER 		= xxxxx
+PASSWORD 	= xxxxx
+SERVER 		= localhost
+DATABASE 	= opentask
+ROOT_DIR	= /var/www/html/open_task
+
+SITE_NAME	= テストＰＪ
+LIST_NAME   = Task
+WIKI_NAME	= Wiki
+FROM_MAIL	= test@hoge.jp
