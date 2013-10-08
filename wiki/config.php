@@ -1,11 +1,20 @@
 <?php
 $_CONFIG = true;
 
+//設定ファイルのインクルード（呼び出し元の階層の違いの為、設定ファイルを探す）
+if(file_exists("../@config.ini")){
+	$ini = @parse_ini_file("../@config.ini");
+}else{
+	$ini = @parse_ini_file( "../../@config.ini");
+}
+
+//print_r($ini);
+
 # obvious db stuff
-$CFG_USER = 'root';
-$CFG_PASSWORD = 'ikh1120';
-$CFG_SERVER = 'localhost';
-$CFG_DATABASE = 'opentask';
+$CFG_USER 		= $ini['USER'];
+$CFG_PASSWORD 	= $ini['PASSWORD'];
+$CFG_SERVER 	= $ini['SERVER'];
+$CFG_DATABASE 	= $ini['DATABASE'];
 
 # this is the return address for emails
 $CFG_RETURN_ADDRESS = '';

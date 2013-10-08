@@ -1,5 +1,6 @@
 <?
 
+//=== ここから自動ログイン処理
 //open task の基本認証ログインを使用
 require_once '../webapp/CB.php';
 
@@ -25,16 +26,14 @@ $_SESSION['level'] = $level;
 //echo $json;
 if ($level == 'admin')
     $_SESSION['admin'] = true;
-
-
-//ここまででログインが完了
+//=== ここまでで自動ログイン完了
 
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <title>Wiki Web Help</title>
+        <title><?=WIKI_NAME?> / <?=SITE_NAME?></title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <link rel="stylesheet" type="text/css" href="theme/default/css/min.css" />
         <script type="text/javascript" language="javascript" src="script/scripts_min.js" ></script>
@@ -52,10 +51,10 @@ if ($level == 'admin')
     <body onload="loading();">
 		<div id="header">
 			<span style="display: inline-block;width: 400px;">
-			<a id="siteTitle" href="JavaScript:;" onclick="onClickLogo()">開発チーム２ / wiki</a>
+			<a id="siteTitle" href="JavaScript:;" onclick="onClickLogo()"><?=SITE_NAME?> / <?=WIKI_NAME?></a>
 			</span>
-			<span class="siteMenu" id="siteSubtitle" style="background-color: dimgray;">wiki pages</span>
-			<span class="siteMenu"><a href="../"			>task lists</a></span>
+			<span class="siteMenu" id="siteSubtitle" style="background-color: dimgray;"><?=WIKI_NAME?></span>
+			<span class="siteMenu"><a href="../"			><?=PJ_NAME?></a></span>
 			<span class="siteMenu"><a href="../websvn/"	>repo viewer</a></span>
             <a id='LocationAnchor' style="position:absolute;top:0;"></a>
 <!--            <a href="javascript:tree.click(tree.home)">

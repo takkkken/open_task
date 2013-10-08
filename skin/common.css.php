@@ -1,5 +1,5 @@
 <?php
-require_once '../webapp/CB.php';
+//require_once '../webapp/CB.php';
 header("Content-type: text/css");
 ?>
 
