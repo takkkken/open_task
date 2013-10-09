@@ -55,7 +55,7 @@ if ($level == 'admin')
 			</span>
 			<span class="siteMenu" id="siteSubtitle" style="background-color: dimgray;"><?=WIKI_NAME?></span>
 			<span class="siteMenu"><a href="../"			><?=PJ_NAME?></a></span>
-			<span class="siteMenu"><a href="../websvn/"	>repo viewer</a></span>
+			<span class="siteMenu"><a href="../websvn/"	><?=SVNV_NAME?></a></span>
             <a id='LocationAnchor' style="position:absolute;top:0;"></a>
 <!--            <a href="javascript:tree.click(tree.home)">
                 <div id="logo">

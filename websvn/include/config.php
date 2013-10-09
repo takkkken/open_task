@@ -1,11 +1,17 @@
 <?php
 
-include('../webapp/conf/opentask.php');
-$siteName	= SITE_NAME;
+//設定ファイルのインクルード
+$ini = @parse_ini_file( "../@config.ini");
+
+//print_r($ini);
+//サイト名	（iniから取得）
+define('SVNV_NAME' , $ini['SVNV_NAME']);
+define('LIST_NAME' , $ini['LIST_NAME']);
+define('WIKI_NAME' , $ini['WIKI_NAME']);
 
 
 //$config->parentPath('/home/samba/rep');
-$config->addRepositorySubpath($siteName, 'http://192.168.10.58/svn', '', null, 't.ishibashi', '3edc4rfV');
+$config->addRepositorySubpath($ini['SITE_NAME'], $ini['SVN_REPO_PATH'], '', null, $ini['SVN_USER'], $ini['SVN_PASS']);
 
 
 // WebSVN - Subversion repository viewing via the web using PHP

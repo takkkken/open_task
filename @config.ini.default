@@ -1,10 +1,53 @@
-USER 		= xxxxx
-PASSWORD 	= xxxxx
-SERVER 		= localhost
-DATABASE 	= opentask
-ROOT_DIR	= /var/www/html/open_task
 
-SITE_NAME	= テストＰＪ
-LIST_NAME   = Task
+;;======= データベース設定
+DB_USER 	= xxxxx
+DB_PASS 	= xxxxx
+DB_HOST 	= localhost
+DB_NAME 	= opentask
+
+;;======= アプリ設置パス設定
+ROOT_DIR	= /var/www/opentask
+
+;;======= 表示設定
+SITE_NAME	= xxxxチーム
+LIST_NAME   = Tasks
 WIKI_NAME	= Wiki
-FROM_MAIL	= test@hoge.jp
+SVNV_NAME	= SvnView
+
+;;======= メールFROM設定
+FROM_MAIL	= admin@open_task_system
+
+;;======= タスク関連設定
+;プロジェクト選択項目
+PROJECT_NAMES[]	= テストプロジェクト１
+PROJECT_NAMES[]	= テストプロジェクト２
+PROJECT_NAMES[]	= ▼以下、ディレクトリ名をPJ名にする場合
+
+;ディレクトリ名をプロジェクト選択項目にする場合、パスを指定
+PROJECT_NAME_DIR	= /path/to/dir/by/dirNames
+
+;種別設定
+TASK_TYPE[タスク]	= task.gif
+TASK_TYPE[バグ]		= bug.png
+TASK_TYPE[保留]		= waiting.gif
+TASK_TYPE[確認]		= check.png
+TASK_TYPE[要望]		= request.gif
+
+;ステータス設定
+TASK_STATUS[未対応]		= red
+TASK_STATUS[確認中]		= pink
+TASK_STATUS[作業中]		= orange
+TASK_STATUS[実装終了]	= orange
+TASK_STATUS[作業終了]	= blue
+TASK_STATUS[予定]		= green
+TASK_STATUS[保留]		= green
+TASK_STATUS[完了]		= #BBB
+
+
+;;======= SVNリポジトリViewer関連設定
+;SVN設定
+SVN_REPO_PATH	= http://url.to.repo/svn
+SVN_USER		= xxxxxx
+SVN_PASS		= xxxxxx
+
+

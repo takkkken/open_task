@@ -15,14 +15,58 @@ if(file_exists("../@config.ini")){
 }
 
 
-//タイトル設定
+//サイト名	（iniから取得）
 define('SITE_NAME' , $ini['SITE_NAME']);
+//サイトURL
 define('SITE_URL'  , 'http://' . $_SERVER['SERVER_NAME'] . dirname($_SERVER['REQUEST_URI']) . '/');
 
-//FROMのメールアドレスを設定
+//Wikiの名前	（iniから取得）
+define('WIKI_NAME'   , $ini['WIKI_NAME']);
+//Svnの名前	（iniから取得）
+define('SVNV_NAME'   , $ini['SVNV_NAME']);
+
+//FROMのメールアドレスを設定	（iniから取得）
 define('FROM_MAIL' , $ini['FROM_MAIL']);
-define('PJ_NAME'   , $ini['LIST_NAME']);	//OpenTaskの名前
-define('WIKI_NAME'   , $ini['WIKI_NAME']);	//Wikiの名前
+//OpenTaskの名前	（iniから取得）
+define('PJ_NAME'   , $ini['LIST_NAME']);
+//種別	（iniから取得）
+$GLOBALS['topic_type'] 		= $ini['TASK_TYPE'];
+//優先度
+$GLOBALS['topic_priority'] 	= array(
+				            "1"		=>"",
+				            "2"		=>"",
+				            "3"  	=>"",
+				            "4"		=>"",
+				            "5"  	=>"",
+				            );
+//プロジェクト選択項目　設定	（iniから取得）
+$GLOBALS['topic_project'] 	= array_flip ( $ini['PROJECT_NAMES'] );
+
+//ディレクトリ名→プロジェクト選択項目　設定	（パスはiniから取得）
+foreach(glob( $ini['PROJECT_NAME_DIR'] . "/*") as $dirname)
+	$GLOBALS['topic_project'][basename($dirname)]="";
+
+//状態	（iniから取得）
+$GLOBALS['topic_status'] = $ini['TASK_STATUS'];
+
+//？？
+$GLOBALS['topic_status_bg'] = array(
+				            "完了"    =>" done",
+				            );
+
+//期限でソート
+$GLOBALS['topic_due_datetime'] = array(
+		"最新順"  =>"new_date",
+		"古い順"  =>"old_date",
+);
+
+
+//？？
+$GLOBALS['topic_status_css'] = "
+            .done td,
+            .done td a{ color:#BBB; text-decoration: line-through;}
+";
+
 
 
 //print_r($ini);
@@ -36,10 +80,10 @@ define('DB_NAME'   , 'default');
 
 //TODO:環境依存
 define('DB_TYPE'   , 'mysql');
-define('DB_HOST'   , $ini['SERVER']);
-define('DB_USER'   , $ini['USER']);
-define('DB_PASS'   , $ini['PASSWORD']);
-define('DB_NAME'   , $ini['DATABASE']);
+define('DB_HOST'   , $ini['DB_HOST']);
+define('DB_USER'   , $ini['DB_USER']);
+define('DB_PASS'   , $ini['DB_PASS']);
+define('DB_NAME'   , $ini['DB_NAME']);
 
 
 

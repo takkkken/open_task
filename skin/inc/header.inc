@@ -28,7 +28,7 @@
 		</span>
 		<span class="siteMenu"><a href="./wiki/"><?=WIKI_NAME?></a></span>
 		<span class="siteMenu" style="background-color: dimgray;"><?=PJ_NAME?></span>
-		<span class="siteMenu"><a href="./websvn/">repo viewer</a></span>
+		<span class="siteMenu"><a href="./websvn/"><?=SVNV_NAME?></a></span>
 <p class="fright">
 <?php if(isset($GLOBALS['user'])){ ?>
 		<?=$GLOBALS['user']['user_name']?>　<a onclick="alert('次のダイアログで、キャンセルをクリックして下さい。\nログアウトします。');" href=./?logout>ログアウト</a></p>

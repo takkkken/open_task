@@ -414,6 +414,10 @@ if ($config->multiViews) {
 		$vars['clientrooturl'] = $rep->clientRootURL;
 		$vars['repname'] = escape($rep->getDisplayName());
 		$vars['allowdownload'] = $rep->getAllowDownload();
+
+		$vars['wiki_name'] = WIKI_NAME;
+		$vars['task_name'] = LIST_NAME;
+		$vars['svn_name'] = SVNV_NAME;
 	}
 }
 

@@ -19,9 +19,9 @@
   </style>
   <![endif]-->
   <title>
-       WebSVN
+       [websvn:svn_name]
        [websvn-test:repname]
-          - [websvn:repname]
+          / [websvn:repname]
        [websvn-endtest]
        [websvn-test:error]
          - ERROR
@@ -91,9 +91,9 @@
 -->
 	<div id="header">
 			<span style="display: inline-block;width: 400px;">
-			<a id="siteTitle" href="[websvn:repurl]">[websvn:repname] / リポジトリビュー</a>
+			<a id="siteTitle" href="[websvn:repurl]">[websvn:repname] / [websvn:svn_name]</a>
 			</span>
-			<span class="siteMenu"><a href="/opentask/wiki/">wiki pages</a></span>
-			<span class="siteMenu"><a href="/opentask/"		>task lists</a></span>
-			<span class="siteMenu" style="background-color: dimgray;">repo viewer</span>
+			<span class="siteMenu"><a href="/opentask/wiki/">[websvn:wiki_name]</a></span>
+			<span class="siteMenu"><a href="/opentask/"		>[websvn:task_name]</a></span>
+			<span class="siteMenu" style="background-color: dimgray;">[websvn:svn_name]</span>
 	</div>

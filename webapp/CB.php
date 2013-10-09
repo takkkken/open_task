@@ -13,7 +13,7 @@ require_once  LIB_DIR   . '/adodb_lite/adodb.inc.php';
 require_once  CLASS_DIR . '/CB_Functions.php';
 require_once  CLASS_DIR . '/CB_DB.php';
 
-require_once  WEBAPP_DIR   . '/conf/'.DB_NAME.'.php';
+//require_once  WEBAPP_DIR   . '/conf/'.DB_NAME.'.php';
 
 $db = new CB_DB;
 

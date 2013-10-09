@@ -11,10 +11,11 @@ if(file_exists("../@config.ini")){
 //print_r($ini);
 
 # obvious db stuff
-$CFG_USER 		= $ini['USER'];
-$CFG_PASSWORD 	= $ini['PASSWORD'];
-$CFG_SERVER 	= $ini['SERVER'];
-$CFG_DATABASE 	= $ini['DATABASE'];
+$CFG_USER 		= $ini['DB_USER'];
+$CFG_PASSWORD 	= $ini['DB_PASS'];
+$CFG_SERVER 	= $ini['DB_HOST'];
+$CFG_DATABASE 	= $ini['DB_NAME'];
+
 
 # this is the return address for emails
 $CFG_RETURN_ADDRESS = '';
