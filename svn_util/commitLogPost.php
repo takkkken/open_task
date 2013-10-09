@@ -6,7 +6,7 @@
 	// インクルード
 	require_once('../webapp/CB_conf.php');
 	require_once '../webapp/CB_mime_type.php';
-	require_once  WEBAPP_DIR   . '/conf/'.DB_NAME.'.php';
+//	require_once  WEBAPP_DIR   . '/conf/'.DB_NAME.'.php';
 	require_once  LIB_DIR   . '/gladius/gladius.php';
 	require_once  LIB_DIR   . '/adodb_lite/adodb.inc.php';
 	require_once  CLASS_DIR . '/CB_Functions.php';
