@@ -88,7 +88,7 @@ width:270px;
 display:none;
 position:relative;
 height:100%;
-border-left:2px solid #6c9fc3;
+border-left:1px solid #6c9fc3;
 border-right:0;
 
 }
@@ -213,7 +213,7 @@ position:relative;
 
 }
 #splitter{
-width:2px;
+width:1px;
 background:#6c9fc3;
 float:left;
 height:100%;
@@ -262,7 +262,7 @@ border:none;
 
 }
 div.control{
-border:2px solid #6c9fc3;
+border:1px solid #6c9fc3;
 border-bottom:2px solid #ccc;
 position:absolute;
 right:18px;
@@ -288,9 +288,9 @@ left:0;
 #footer{
 position:absolute;
 background:#f3f0f6;
-border:2px solid #6c9fc3;
+border:1px solid #6c9fc3;
 border-top:0 solid #aaa;
-border-bottom:2px solid #6c9fc3;
+border-bottom:1px solid #6c9fc3;
 left:8px;
 right:10px;
 bottom:7px;

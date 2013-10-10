@@ -141,6 +141,24 @@ include_once 'skin/inc/header.inc';
 			</tr>
 
 			<tr class="trForm">
+				<td class="tdFormCaption">プロジェクト:</td>
+				<td colspan=3><select name="topic_project">
+						<option value="">▼プロジェクト</option>
+									<?php
+				foreach($GLOBALS['topic_project'] AS $key=>$val){ 
+					if($key!=$data['topic_project']){
+						print '<option value="'.$key.'">'.$key.'</option>';
+					}else{
+						print '<option selected value="'.$key.'">'.$key.'</option>';
+					}
+				}
+				?>
+				</select>
+				</td>
+			</tr>
+
+
+			<tr class="trForm">
 				<td class="tdFormCaption"><span class="requiredSign">*</span> タイトル:</td>
 				<td colspan=3><input name="topic_title" type="text"
 					value="<?=$data["topic_title"]?>" id="title" style="width: 300px;" />
@@ -316,23 +334,6 @@ include_once 'skin/inc/header.inc';
 									<?php
 				foreach($GLOBALS['topic_priority'] AS $key=>$val){ 
 					if($key!=$data['topic_priority']){
-						print '<option value="'.$key.'">'.$key.'</option>';
-					}else{
-						print '<option selected value="'.$key.'">'.$key.'</option>';
-					}
-				}
-				?>
-				</select>
-				</td>
-			</tr>
-
-			<tr class="trForm">
-				<td class="tdFormCaption">プロジェクト:</td>
-				<td colspan=3><select name="topic_project">
-						<option value="">▼プロジェクト</option>
-									<?php
-				foreach($GLOBALS['topic_project'] AS $key=>$val){ 
-					if($key!=$data['topic_project']){
 						print '<option value="'.$key.'">'.$key.'</option>';
 					}else{
 						print '<option selected value="'.$key.'">'.$key.'</option>';

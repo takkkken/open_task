@@ -78,6 +78,23 @@ include_once 'skin/inc/header.inc';
 	<td colspan=3><?=$GLOBALS['user']['user_name']?>&nbsp;&lt;<?=$GLOBALS['user']['user_mail']?>&gt;</td>
 </tr>
 
+
+<? if(count($GLOBALS['topic_project'])>0){ ?>
+	<tr class="trForm">
+		<td class="tdFormCaption">プロジェクト:
+		</td>
+		<td colspan=3>
+			<select name="topic_project">
+			<option value="">▼プロジェクト</option>
+			<?php foreach($GLOBALS['topic_project'] AS $key=>$val){ ?>
+			<option value="<?=$key?>"><?=$key?></option>
+			<?php } ?>
+			</select>
+		</td>
+	</tr>
+<? } ?>
+
+
 <tr class="trForm">
 	<td class="tdFormCaption"><span class="requiredSign">*</span>  タイトル:</td>
 	<td colspan=3>
@@ -195,22 +212,6 @@ include_once 'skin/inc/header.inc';
 	</td>
 </tr>
 
-<? // webapp\conf\opentask.phpにある場合のみ表示 ?>
-<? if(count($GLOBALS['topic_project'])>0){ ?>
-	<tr class="trForm">
-		<td class="tdFormCaption">プロジェクト:
-		</td>
-		<td colspan=3>
-			<select name="topic_project">
-			<option value="">▼プロジェクト</option>
-			<?php foreach($GLOBALS['topic_project'] AS $key=>$val){ ?>
-			<option value="<?=$key?>"><?=$key?></option>
-			<?php } ?>
-			</select>
-		</td>
-	</tr>
-<? } ?>
-<? // webapp\conf\opentask.phpにある場合のみ表示 ?>
 <? if(count($GLOBALS['topic_priority'])>0){ ?>
 	<tr class="trForm">
 		<td class="tdFormCaption">優先度:
