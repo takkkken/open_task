@@ -106,8 +106,12 @@ define('PEAR_DIR'  , LIB_DIR . '/pear');
 ini_set('include_path', PEAR_DIR);
 
 
+//ファイルアップロード先
+define('DATA_DIR'  , VAR_DIR  . '/data');
+if(!file_exists(DATA_DIR))
+	print("ファイルアップロード先「".DATA_DIR."」ディレクトリが存在しないため、ファイルアップロードが行えません<br>");
 
-define('DATA_DIR'  , VAR_DIR  . '/data/' . DB_NAME);
-
+//テキストデータ形式で保存する場合の格納先（現在使用を想定していない）
 global $GLADIUS_DB_ROOT;
 $GLADIUS_DB_ROOT = VAR_DIR . '/db/';
+
