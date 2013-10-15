@@ -43,8 +43,10 @@ $GLOBALS['topic_priority'] 	= array(
 $GLOBALS['topic_project'] 	= array_flip ( $ini['PROJECT_NAMES'] );
 
 //ディレクトリ名→プロジェクト選択項目　設定	（パスはiniから取得）
-foreach(glob( $ini['PROJECT_NAME_DIR'] . "/*") as $dirname)
-	$GLOBALS['topic_project'][basename($dirname)]="";
+if(isset($ini['PROJECT_NAME_DIR'])){
+	foreach(glob( $ini['PROJECT_NAME_DIR'] . "/*") as $dirname)
+		$GLOBALS['topic_project'][basename($dirname)]="";
+}
 
 //状態	（iniから取得）
 $GLOBALS['topic_status'] = $ini['TASK_STATUS'];
